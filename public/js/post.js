@@ -5,8 +5,8 @@ const postPokemon = () => {
         name: document.getElementById("name").value, //coge el valor que se pone dentro de los elementos
         type: document.getElementById("type").value,
     };
-
-    const urlApi = `http://localhost:1010/api/pokemons`; //si es por query aquideb añadirse ?name=${name}?type
+    const URI_Heroku = "https://poke-forms.herokuapp.com";
+    const urlApi = `${URI_Heroku}/api/pokemons`; //si es por query aquideb añadirse ?name=${name}?type
 
     const options = {
         //se puede especificar el metodo

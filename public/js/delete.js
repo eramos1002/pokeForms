@@ -1,5 +1,6 @@
 const getAllPokemons = () => {
-    const urlApi = `http://localhost:1010/api/pokemons`; // SE USA EL ENDPOINT DE POSTMAN en este caso el GET general
+    const URI_Heroku = "https://poke-forms.herokuapp.com";
+    const urlApi = `${URI_Heroku}/api/pokemons`; // SE USA EL ENDPOINT DE POSTMAN en este caso el GET general
 
     fetch(urlApi)
         .then((response) => {

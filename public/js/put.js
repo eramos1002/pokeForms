@@ -1,6 +1,7 @@
 const searchPokemon = () => {
     const idPokemon = document.getElementById("idPokemonSearch").value;
-    const urlApi = `http://localhost:1010/api/onepokemon?id=${idPokemon}`;
+    const URI_Heroku = "https://poke-forms.herokuapp.com";
+    const urlApi = `${URI_Heroku}/api/onepokemon?id=${idPokemon}`;
     fetch(urlApi)
         .then((response) => {
             return response.json();
@@ -17,7 +18,8 @@ const searchPokemon = () => {
 
 const putPokemon = () => {
     const idPokemon = document.getElementById("idPokemon").value;
-    const urlApi = `http://localhost:1010/api/pokemons/${idPokemon}`;
+    const URI_Heroku = "https://poke-forms.herokuapp.com";
+    const urlApi = `${URI_Heroku}/api/pokemons/${idPokemon}`;
 
     const putPokemon = {
         name: document.getElementById("namePokemon").value,

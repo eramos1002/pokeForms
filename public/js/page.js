@@ -1,5 +1,6 @@
 const getPokemonpage = (page = 1) => {
-    const urlApi = `http://localhost:1010/api/pokemons/page/${page}`;
+    const URI_Heroku = "https://poke-forms.herokuapp.com";
+    const urlApi = `${URI_Heroku}/api/pokemons/page/${page}`;
 
     fetch(urlApi)
         .then((response) => {
